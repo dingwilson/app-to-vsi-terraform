@@ -1,0 +1,5 @@
+node_modules		usr/src/app-to-vsi-terraform
+public				usr/src/app-to-vsi-terraform
+server				usr/src/app-to-vsi-terraform
+package.json		usr/src/app-to-vsi-terraform
+package-lock.json	usr/src/app-to-vsi-terraform
