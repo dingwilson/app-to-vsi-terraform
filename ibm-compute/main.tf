@@ -8,10 +8,8 @@
 
 provider "ibm" {
   bluemix_api_key    = "${var.ibm_cloud_api_key}"
-  softlayer_username = "${var.ibm_sl_username}"
   softlayer_api_key  = "${var.ibm_sl_api_key}"
 }
-
 
 resource "ibm_compute_ssh_key" "ssh_key_gip" {
     label = "${var.ssh_label}"
@@ -19,7 +17,7 @@ resource "ibm_compute_ssh_key" "ssh_key_gip" {
 }
 
 resource "ibm_compute_vm_instance" "vm1" {
-    hostname = "terraform-ibm"
+    hostname = "${var.vi-instance-name}"
     domain = "example.com"
     os_reference_code = "DEBIAN_8_64"
     datacenter = "${var.datacenter}"
