@@ -4,7 +4,7 @@
 #
 # Version 1.0
 #
-# Author: Matthew Perrins
+# Author: Matthew Perrins and Wilson Ding
 
 provider "ibm" {
   bluemix_api_key    = "${var.ibm_cloud_api_key}"
