@@ -12,13 +12,8 @@ variable "ssh_public_key" {
 	default = "publickey"
 }
 
-variable "ssh_private_key" {
-	default = "privatekey"
-}
-
 variable "ibm_cloud_api_key" {
 	default = "6M7HWdVtOy0cO-vAvA1SINuF1NSANho4wAvaGaRC1Hg0"
-	
 }
 
 variable "ibm_sl_api_key" {
