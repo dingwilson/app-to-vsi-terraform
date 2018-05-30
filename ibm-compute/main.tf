@@ -18,7 +18,7 @@ resource "ibm_compute_ssh_key" "ssh_key_gip" {
 }
 
 resource "ibm_compute_vm_instance" "vm1" {
-    hostname = "${var.vi-instance-name}"
+    hostname = "${var.vi_instance_name}"
     domain = "example.com"
     os_reference_code = "DEBIAN_8_64"
     datacenter = "${var.datacenter}"
