@@ -1,3 +1,3 @@
-output "global ip"{
-	value = "${ibm_network_public_ip.test-global-ip.ip_address}"
+output "host ip"{
+	value = "${ibm_compute_vm_instance.vm1.ipv4_address}"
 }
