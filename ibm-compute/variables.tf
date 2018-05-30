@@ -20,6 +20,10 @@ variable "TF_VAR_ibm_sl_api_key" {
 	default = "4f2e640515b75183fb2685bf0e02f467e4c3fa90b12f42000132faab26d1db46"	
 }
 
+variable "ibm_sl_api_key" {
+	default = "4f2e640515b75183fb2685bf0e02f467e4c3fa90b12f42000132faab26d1db46"	
+}
+
 variable "ibm_sl_username" {
 	default = "1416455_wilson.ding1@ibm.com"
 }
