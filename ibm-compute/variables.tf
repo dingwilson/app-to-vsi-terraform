@@ -16,10 +16,6 @@ variable "ibm_cloud_api_key" {
 	default = "ibmcloudapikey"
 }
 
-variable "TF_VAR_ibm_sl_api_key" {
-	default = "ibmslapikey"	
-}
-
 variable "ibm_sl_api_key" {
 	default = "ibmslapikey"	
 }
