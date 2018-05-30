@@ -33,7 +33,3 @@ resource "ibm_compute_vm_instance" "vm1" {
         "${ibm_compute_ssh_key.ssh_key_gip.id}"
     ]
 }
-
-resource "ibm_network_public_ip" "test-global-ip" {
-    routes_to = "${ibm_compute_vm_instance.vm1.ipv4_address}"
-}
