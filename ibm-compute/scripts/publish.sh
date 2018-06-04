@@ -13,9 +13,12 @@ git config --global push.default simple
 GIT_URL=$(cat giturl.txt)
 AUTH_GIT_URL=${GIT_URL:0:8}${GIT_USER}:${GIT_PASSWORD}@${GIT_URL:8}
 
-git clone AUTH_GIT_URL repo
+git clone ${AUTH_GIT_URL} repo
 cp terraform.tfstate repo/ibm-compute/
 cd repo
 git add .
 git commit -m "Published terraform.tfstate from ibmcloud-toolchain-${PIPELINE_TOOLCHAIN_ID}"
 git push
+cd ..
+
+exit 0
