@@ -39,3 +39,5 @@ case $IDS_STAGE_NAME in
 		echo "Custom stage... skipping environment variable validation checks."
 		;;
 esac
+
+exit 0
