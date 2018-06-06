@@ -1,3 +1,3 @@
 #! /usr/bin/env bash
 
-nohup npm start > /dev/null 2>&1 &
+nohup npm start > output.log &
