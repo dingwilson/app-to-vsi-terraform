@@ -4,8 +4,6 @@ Priority: optional
 Maintainer: John Doe <replacethiswithyourem@il.com>
 Build-Depends: debhelper (>= 9)
 Standards-Version: 3.9.8
-Vcs-Git: git@git.ng.bluemix.net:iaas/app-to-vsi-terraform.git
-Vcs-Browser: https://git.ng.bluemix.net/iaas/app-to-vsi-terraform
 
 Package: app-to-vsi-terraform-0.0
 Architecture: all
