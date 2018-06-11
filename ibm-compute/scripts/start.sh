@@ -1,1 +1,2 @@
+pkill node
 npm start
