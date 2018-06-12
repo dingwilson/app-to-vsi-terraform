@@ -6,6 +6,12 @@
 #
 # Author: IBM
 
+terraform {
+    backend "local" {
+        path = "repo/ibm-compute/terraform.tfstate"
+    }
+}
+
 provider "ibm" {
   bluemix_api_key    = "${var.ibm_cloud_api_key}"
   softlayer_username = "${var.ibm_sl_username}"
