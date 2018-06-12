@@ -10,4 +10,7 @@ AUTH_GIT_URL=${GIT_URL:0:8}${GIT_USER}:${GIT_PASSWORD}@${GIT_URL:8}
 
 git clone ${AUTH_GIT_URL} repo
 
+cd repo
+git checkout -b origin/terraform
+
 exit 0
