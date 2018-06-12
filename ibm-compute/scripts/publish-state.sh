@@ -1,6 +1,9 @@
 #! /usr/bin/env bash
 
-bash git-config.sh
+# git config
+git config --global user.email "autobuild@not-an-email.com"
+git config --global user.name "Automatic Build: ibmcloud-toolchain-${PIPELINE_TOOLCHAIN_ID}"
+git config --global push.default simple
 
 cd repo
 git checkout -b terraform

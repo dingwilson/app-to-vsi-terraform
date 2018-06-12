@@ -1,6 +1,8 @@
 #! /usr/bin/env bash
 
-bash git-config.sh
+# Validating environment variables
+[ -z "${GIT_USER}" ] && echo "Skipping publishing terraform state to git repo... To publish, please set GIT_USER environment variable... Please see the README for more information." && exit 0
+[ -z "${GIT_PASSWORD}" ] && echo "Skipping publishing terraform state to git repo... To publish, please set GIT_PASSWORD environment variable... Please see the README for more information." && exit 0
 
 # Create Git Repo URL
 GIT_URL=$(cat giturl.txt)
