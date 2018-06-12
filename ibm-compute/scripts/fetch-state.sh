@@ -12,5 +12,6 @@ git clone ${AUTH_GIT_URL} repo
 
 cd repo
 git checkout -b origin/terraform
+cd -
 
 exit 0
