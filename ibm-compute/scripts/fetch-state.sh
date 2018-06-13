@@ -20,8 +20,9 @@ git clone ${AUTH_GIT_URL} repo
 
 cd repo
 
-if [ $(git ls-remote --heads ${AUTH_GIT_URL} terraform | wc -l) == "1" ]; then
+if [ $(git ls-remote --heads ${AUTH_GIT_URL} terraform | wc -l) == "0" ]; then
 	git checkout -b terraform
+	git push origin terraform
 else
 	git fetch origin terraform:terraform
 	git checkout terraform
