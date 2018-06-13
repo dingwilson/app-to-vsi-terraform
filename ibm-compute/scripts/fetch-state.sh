@@ -1,11 +1,19 @@
 #! /usr/bin/env bash
 
+# This script fetches previously persisted terraform state metadata (see publish-state.sh)
+# This metadata is stored in a terraform branch off of the main git repo.
+
+# Takes in GIT_USER, GIT_PASSWORD, and GIT_URL environment variables
+
 # Validating environment variables
-[ -z "${GIT_USER}" ] && echo "Skipping publishing terraform state to git repo... To publish, please set GIT_USER environment variable... Please see the README for more information." && exit 0
-[ -z "${GIT_PASSWORD}" ] && echo "Skipping publishing terraform state to git repo... To publish, please set GIT_PASSWORD environment variable... Please see the README for more information." && exit 0
+envVars=("GIT_USER" "GIT_PASSWORD" "GIT_URL")
+
+for var in "${envVars[@]}"
+do
+	[ -z "${!var}" ] && echo "Skipping publishing terraform state to git repo: required environment variable ${var} not set... Please see the README for more information." && exit 0
+done
 
 # Create Git Repo URL
-GIT_URL=$(cat giturl.txt)
 AUTH_GIT_URL=${GIT_URL:0:8}${GIT_USER}:${GIT_PASSWORD}@${GIT_URL:8}
 
 git clone ${AUTH_GIT_URL} repo
