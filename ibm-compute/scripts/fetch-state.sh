@@ -11,7 +11,14 @@ AUTH_GIT_URL=${GIT_URL:0:8}${GIT_USER}:${GIT_PASSWORD}@${GIT_URL:8}
 git clone ${AUTH_GIT_URL} repo
 
 cd repo
-git checkout -b origin/terraform
+
+if [ $(git ls-remote --heads ${AUTH_GIT_URL} terraform | wc -l) == "1" ]; then
+	git checkout -b terraform
+else
+	git fetch origin terraform:terraform
+	git checkout terraform
+fi
+
 cd -
 
 exit 0
